@@ -7,16 +7,28 @@ import Image from "next/image";
 interface FlipCardProps {
   title: string;
   message: string;
-  image?: string; // optional
+  image?: string;
+  onFlip?: () => void; //notify parent
 }
 
-export default function FlipCard({ title, message, image }: FlipCardProps) {
+export default function FlipCard({ title, message, image, onFlip }: FlipCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasFlippedOnce, setHasFlippedOnce] = useState(false);
+
+  const handleFlip = () => {
+    //notify parent ONLY the first time this card flips
+    if (!hasFlippedOnce && onFlip) {
+      onFlip();
+      setHasFlippedOnce(true);
+    }
+
+    setIsOpen(!isOpen);
+  };
 
   return (
     <motion.div
       className="relative w-80 h-56 cursor-pointer"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={handleFlip}
       animate={{ rotateY: isOpen ? 180 : 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       style={{ transformStyle: "preserve-3d" }}
