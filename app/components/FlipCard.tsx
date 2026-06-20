@@ -35,16 +35,16 @@ export default function FlipCard({ title, message, image, onFlip }: FlipCardProp
     >
       {/* FRONT COVER */}
       <div
-        className="absolute inset-0 bg-[#F9F7F7] rounded-xl shadow-xl ring-2 ring-[#3F72AF] flex flex-col justify-center items-center text-center p-4"
+        className="absolute inset-0 bg-[#F9F7F7] rounded-xl shadow-xl ring-2 ring-[#9b870c] flex flex-col justify-center items-center text-center p-4"
         style={{ backfaceVisibility: "hidden" }}
       >
-        <h1 className="text-2xl font-bold text-[#112D4E]">{title}</h1>
+        <h1 className="text-2xl font-bold text-[#daa520]">{title}</h1>
         <p className="text-sm mt-2 text-[#112D4E]">Tap to Flip</p>
       </div>
 
       {/* INSIDE */}
       <div
-        className="absolute inset-0 bg-[#F9F7F7] rounded-xl shadow-xl ring-2 ring-[#3F72AF] flex flex-col justify-center items-center text-center p-4"
+        className="absolute inset-0 bg-[#F9F7F7] rounded-xl shadow-xl ring-2 ring-[#9b870c] flex flex-col justify-center items-center text-center p-4"
         style={{
           backfaceVisibility: "hidden",
           transform: "rotateY(180deg)",

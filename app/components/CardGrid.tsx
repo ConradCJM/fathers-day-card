@@ -7,17 +7,17 @@ const cards = [
   {
     title: "Happy Father’s Day",
     message: "Thanks for being the best Dad and always being there for me! -Love CJ ❤️",
-    image: "/images/dad1.jpg",
+    image: "/photos/dad1.jpg",
   },
   {
     title: "Best Dad Ever",
     message: "You’re the best dad! Not because of what you do, but because of who you are.",
-    image: "/images/dad2.jpg",
+    image: "/photos/dad2.jpg",
   },
   {
-    title: "Thank You",
+    title: "Thank You!",
     message: "Thank you for every moment, every effort, and every bit of love you\’ve given me.",
-    image: "/images/dad3.jpg",
+    image: "/photos/dad3.jpg",
   },
 ];
 
